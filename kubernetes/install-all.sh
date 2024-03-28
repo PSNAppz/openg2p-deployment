@@ -11,7 +11,7 @@ declare -a components=(
     "openg2p"
     "odk-central"
     # "g2p-cash-transfer-bridge"
-    # "social-payments-account-registry"
+    # "openg2p-spar"
 )
 
 for i in "${components[@]}"; do

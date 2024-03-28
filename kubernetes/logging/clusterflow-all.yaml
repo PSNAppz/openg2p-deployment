@@ -18,4 +18,4 @@ spec:
     - select:
         labels:
           # TODO: For now this only selects spar
-          app.kubernetes.io/name: social-payments-account-registry
+          app.kubernetes.io/name: openg2p-spar

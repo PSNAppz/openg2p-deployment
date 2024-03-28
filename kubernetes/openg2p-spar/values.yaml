@@ -22,29 +22,29 @@ postgresql:
 
 # Enable only one of the following mappers.
 # Defaults is SPAR Mapper
-spar-g2pconnect-id-mapper:
+openg2p-spar-mapper-api:
   enabled: true
   # Comment out this section, if you donot have PostgreSQL installed already.
   envVars:
-    SPAR_G2PCONNECT_MAPPER_DB_HOSTNAME: "postgres-postgresql.postgres"
+    OPENG2P_SPAR_MAPPER_API_DB_HOSTNAME: "postgres-postgresql.postgres"
   # Comment out this section, if you donot have PostgreSQL installed already.
   envVarsFrom:
-    SPAR_G2PCONNECT_MAPPER_DB_PASSWORD:
+    OPENG2P_SPAR_MAPPER_API_DB_PASSWORD:
       secretKeyRef:
         name: "postgres-postgresql"
         key: password
 
-sunbird-rc-g2p-mapper-registry:
-  enabled: false
-  # Comment out the following, if you donot have PostgreSQL installed already.
-  registry:
-    envVars:
-      connectionInfo_uri: "jdbc:postgresql://postgres-postgresql.postgres:5432/spardb"
-    envVarsFrom:
-      connectionInfo_password:
-        secretKeyRef:
-          name: postgres-postgresql
-          key: password
+#sunbird-rc-g2p-mapper-registry:
+#  enabled: false
+#  # Comment out the following, if you donot have PostgreSQL installed already.
+#  registry:
+#    envVars:
+#      connectionInfo_uri: "jdbc:postgresql://postgres-postgresql.postgres:5432/spardb"
+#    envVarsFrom:
+#      connectionInfo_password:
+#        secretKeyRef:
+#          name: postgres-postgresql
+#          key: password
 
 # Uncomment the following if you donot have istio installed already.
 # istio:
